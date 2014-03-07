@@ -172,7 +172,6 @@ public class AndroidGradleProjectComponent extends AbstractProjectComponent {
     MessageBusConnection connection = project.getMessageBus().connect(disposable);
     connection.subscribe(ProjectTopics.MODULES, moduleListener);
     connection.subscribe(VirtualFileManager.VFS_CHANGES, buildFileUpdater);
-    connection.subscribe(ProjectTopics.PROJECT_ROOTS, buildFileUpdater);
   }
 
   @Override
