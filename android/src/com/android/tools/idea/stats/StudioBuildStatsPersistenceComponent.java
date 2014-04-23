@@ -83,6 +83,11 @@ public class StudioBuildStatsPersistenceComponent
    * @param newRecord to be added to the internal queue.
    */
   public void addBuildRecord(@NotNull BuildRecord newRecord) {
+    // temporarily disabled
+    if (true) {
+      return;
+    }
+
     // Skip if there is no Application, allowing this to run using non-idea unit tests.
     Application app = ApplicationManager.getApplication();
     if (app != null && !app.isUnitTestMode()) {
